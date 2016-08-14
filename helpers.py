@@ -179,3 +179,17 @@ def calc_file_md5(file_path):
     fo.close()
 
     return md5_hash.hexdigest()
+
+
+def md5(content, capital=False, size=32):
+    """MD5 哈希方法
+    :param content: 待哈希的字符串
+    :param capital: 是否大写
+    :param size: 哈希值的长度，16 或者 32
+    """
+    md5_hash = hashlib.md5(content).hexdigest()
+    if capital:
+        md5_hash = md5_hash.upper()
+    if size == 16:
+        md5_hash = md5_hash[8:24]
+    return md5_hash
