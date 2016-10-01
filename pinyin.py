@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
     汉字转拼音
+    ~~~~~~~~
 
     the PinYinDict is generated from xyb's pinyin_zopeext.py, using:
 
