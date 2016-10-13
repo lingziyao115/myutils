@@ -37,6 +37,10 @@ ipv4_validator = re.compile(r'''^
                         (\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])
                         $''', re.X)
 
+# HTML A 标签
+html_a_validator = re.compile(r'''<a [^>]*href=('|")?([^"\'\s]+)\1[^>]*>([^<]+)</a>''',
+                            re.I)
+
 
 if __name__ == '__main__':
     # 测试代码
